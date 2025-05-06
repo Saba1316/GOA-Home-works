@@ -1,0 +1,187 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(100, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(200, 0, 0) 60%);
+    background-attachment: fixed;
+    height: 180vh;
+}
+
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.navbar {
+    width: 100%;
+    display: inline;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    padding: 15px 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    left: 10%;
+    top: 30vh;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#homediv {
+    height: 45vh;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#homeimg {
+    position: absolute;
+    left: 100vh;
+    top: 7vh;
+    border-radius: 100px;
+    width: 100%;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+#homep {
+    position: absolute;
+    border-radius: 20px;
+    height: 50vh;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+#imgh {
+    position: absolute;
+    left: 100vh;
+    top: 50vh;
+    border-radius: 100px;
+    width: 100%;
+}
+
+#imgh1 {
+    position: absolute;
+    left: 100vh;
+    top: 110vh;
+    border-radius: 100px;
+    width: 100%;
+}
+
+#imgh2 {
+    position: absolute;
+    left: 100vh;
+    top: 150vh;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.aboutusdiv {
+    height: 70vh;
+}
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#aboutuslogo {
+    position: absolute;
+    left: 100vh;
+    top: 210vh;
+    border-radius: 100px;
+    width: 100%;
+}

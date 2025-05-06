@@ -1,0 +1,13 @@
+.outer{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
+
+.insider{
+    width: 70px;
+    position: relative;
+    height: 70px;
+    background-color: black;
+    left: 100px;
+}

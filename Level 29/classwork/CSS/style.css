@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;  /* Set the font family to Arial */
+    font-size: 16px;                   /* Set the base font size */
+    line-height: 1.6;                  /* Increase line height for readability */
+    color: #333;                       /* Dark gray text color */
+    background-color: #f4f4f4;         /* Light gray background color */
+    margin: 0;                         /* Remove default margin */
+    padding: 20px;                     /* Add padding around the body */
+}
+
+/* Styles for the main heading */
+h1 {
+    font-size: 2.5em;                  /* Large font size for the heading */
+    font-weight: bold;                 /* Make the text bold */
+    color: #4CAF50;                    /* Green color for the heading */
+    margin-bottom: 15px;               /* Space below the heading */
+}
+
+/* Styles for paragraphs */
+p {
+    font-size: 1em;                    /* Standard font size for paragraphs */
+    color: #555;                       /* Medium gray text color */
+    margin-bottom: 10px;               /* Space below paragraphs */
+}
+
+/* Styles for links */
+a {
+    color: #007BFF;                    /* Blue color for links */
+    text-decoration: none;              /* Remove underline from links */
+    transition: color 0.3s ease;       /* Smooth transition for color change */
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #0056b3;                    /* Darker blue on hover */
+    text-decoration: underline;         /* Underline links on hover */
+}
+
+/* Active state for links */
+a:active {
+    color: #004085;                    /* Even darker blue when clicked */
+}
+
+/* Focus state for links (for accessibility) */
+a:focus {
+    outline: 2px dashed #4CAF50;       /* Green dashed outline when focused */
+    outline-offset: 2px;               /* Space between outline and text */
+}

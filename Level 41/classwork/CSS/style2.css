@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: transformBox 2s 3; 
+}
+
+@keyframes transformBox {
+    0% {
+        background-color: red;
+        transform: scale(1) rotate(0deg);
+        border-radius: 0%; 
+    }
+    50% {
+        background-color: blue;
+        transform: scale(2) rotate(90deg);
+        border-radius: 50%; 
+    }
+    100% {
+        background-color: red;
+        transform: scale(1) rotate(0deg);
+        border-radius: 0%; 
+    }
+}

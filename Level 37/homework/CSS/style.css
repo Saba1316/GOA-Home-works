@@ -1,0 +1,55 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column: 15px;
+    column-gap: 15px;
+    grid-auto-rows: auto;
+    grid-row-gap: 15px;
+    grid-template-areas:
+      "box1 box1 box1 box3 box3"
+      "box1 box1 box1 box4 box4"
+      "box2 box2 box2 box2 box2"
+      "box5 box6 box7 box8 box9";
+    padding: 15px;
+  }
+  
+  div {
+    min-height: 100px;
+    background-color: blue;
+  }
+  
+  #boxA {
+    grid-area: box1;
+  }
+  
+  #boxB {
+    grid-area: box2;
+  }
+  
+  #boxC {
+    grid-area: box3;
+  }
+  
+  #boxD {
+    grid-area: box4;
+  }
+  
+  #boxE {
+    grid-area: box5;
+  }
+  
+  #boxF {
+    grid-area: box6;
+  }
+  
+  #boxG {
+    grid-area: box7;
+  }
+  
+  #boxH {
+    grid-area: box8;
+  }
+  
+  #boxI {
+    grid-area: box9;
+  }

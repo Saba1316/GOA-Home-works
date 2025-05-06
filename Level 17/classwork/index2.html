@@ -1,0 +1,32 @@
+<!-- Create a complete form that will have name, email, age and password input. 
+Also, add a drop down menu at the bottom with which the user can choose what he wants the account for (Business or personal, that is,
+whether he wants to create a personal account or a business account). -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+
+    <body>
+        <h1>Registration Form</h1>
+        <form>
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="gmail">Gmail:</label>
+            <input type="email" id="gmail" name="gmail" required><br><br>
+            <label for="age">Age :</label>
+            <input type="number" id="age" name="age" required><br><br>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" required><br><br>
+            <label for="k1">Account type: </label>
+            <select name="types" id="k1">
+               <option value="bussines">Bussines</option>
+               <option value="personal">Personal</option>
+            </select><br><br>
+            <input type="submit" value="Sign up">
+        </form>
+    </body>
+</html>

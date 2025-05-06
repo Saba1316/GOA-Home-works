@@ -1,0 +1,61 @@
+<!-- Create an image slider with 5 photos -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Slider</title>
+    <style>
+        .slider-container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider-images {
+            display: flex;
+            width: 500%; /* 5 images, each takes 20% of the container width */
+            transition: transform 0.5s ease;
+        }
+        .slider-images img {
+            width: 20%; /* Each image will take 20% of the container width */
+            height: auto;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .prev, .next {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider-images">
+        <img src="./images/image1.png" alt="Image 1">
+        <img src="./images/image2.png" alt="Image 2">
+        <img src="./images/image3.png" alt="Image 3">
+        <img src="./images/image4.png" alt="Image 4">
+        <img src="./images/image5.png" alt="Image 5">
+    </div>
+</div>
+
+<div class="buttons">
+    <button class="prev">❮ Prev</button>
+    <button class="next">Next ❯</button>
+</div>
+
+<script src="./script2.js"></script>
+
+</body>
+</html>

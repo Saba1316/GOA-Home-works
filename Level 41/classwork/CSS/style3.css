@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: multiStateAnimation 4s infinite; 
+}
+
+@keyframes multiStateAnimation {
+    0% {
+        background-color: red;
+        transform: scale(1);
+    }
+    25% {
+        background-color: yellow;
+        transform: scale(1.5);
+    }
+    50% {
+        background-color: green;
+        transform: scale(2);
+    }
+    75% {
+        background-color: blue;
+        transform: scale(1.5);
+    }
+    100% {
+        background-color: purple;
+        transform: scale(1);
+    }
+}

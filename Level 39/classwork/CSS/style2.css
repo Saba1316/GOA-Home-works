@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+ }
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition: transform 0.3s 
+}
+
+div:hover {
+    transform: scale(1.5); 
+}
+
+div:active {
+    transform: scale(0.9); 
+}
+    

@@ -1,0 +1,33 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 200vh; 
+}
+
+
+.container {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #3498db;
+    margin: 20px;
+    padding: 20px;
+    position: relative; 
+}
+
+
+
+
+.relative-box {
+    background: #e74c3c;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+    top: 30px; 
+    left: 30px; 
+}
+
+

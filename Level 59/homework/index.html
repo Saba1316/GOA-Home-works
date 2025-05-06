@@ -1,0 +1,68 @@
+<!-- Create a form that will ask the user for name, email, password, gender (drop-down menu), 
+country (drop-down menu) and a checkbox that will check whether the user agrees with the Terms & Conditions of the site. 
+If he doesn't agree, he can't register, if he agrees, he can. If any field is left empty, redden the border of that box. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    .error {
+      border: 2px solid red;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">Select Country</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="canada">Canada</option>
+        <option value="india">India</option>
+        <option value="australia">Australia</option>
+      </select>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="terms" name="terms"> I agree to the <a href="#">Terms & Conditions</a>
+      </label>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="error-message" class="hidden" style="color: red;">Please fill in all fields and agree to the Terms & Conditions.</div>
+
+  <script src="./script.js">
+  </script>
+</body>
+</html>

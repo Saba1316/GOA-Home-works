@@ -1,0 +1,64 @@
+<!-- Create another image slider with 6 photos -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-Image Slider</title>
+    <style>
+        .slider-container {
+            width: 80%;
+            max-width: 700px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider-images {
+            display: flex;
+            width: 600%; /* 6 images, each takes 16.67% of the container width */
+            transition: transform 0.5s ease;
+        }
+        .slider-images img {
+            width: 16.67%; /* Each image will take 16.67% of the container width */
+            height: auto;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .prev, .next {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider-images">
+        <img src="./images/image7.png" alt="Image 1">
+        <img src="./images/image8.png" alt="Image 2">
+        <img src="./images/image9.png" alt="Image 3">
+        <img src="./images/image10.png" alt="Image 4">
+        <img src="./images/image11.png" alt="Image 5">
+        <img src="./images/image12.png" alt="Image 6">
+    </div>
+</div>
+
+<div class="buttons">
+    <button class="prev">❮ Prev</button>
+    <button class="next">Next ❯</button>
+</div>
+
+<script src="./script3.js"></script>
+
+</body>
+</html>

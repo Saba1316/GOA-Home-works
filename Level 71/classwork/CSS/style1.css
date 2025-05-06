@@ -1,0 +1,14 @@
+/* Do the same, but instead of clockwise, hit the circle counter-clockwise */
+
+.outer{
+    width: 370px;
+    height: 370px;
+    background-color: black;
+}
+
+.insider{
+    width: 70px;
+    position: relative;
+    height: 70px;
+    background-color: red;
+}

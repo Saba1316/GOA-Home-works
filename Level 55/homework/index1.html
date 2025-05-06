@@ -1,0 +1,29 @@
+<!-- Create a form where you have input type text, email, password and submit. Get the form alone through getElementById in the js file. 
+Add an addEventListener to the form and listen to the event: 'submit'. After submission, the code should output the value of all inputs. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="./script1.js"></script>
+
+</body>
+</html>
