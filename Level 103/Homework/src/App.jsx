@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+function Contact() {
+  const [authorized, setAuthorized] = React.useState(false);
+  const [password, setPassword] = React.useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (password === 'swordfish') {
+      setAuthorized(true);
+    } else {
+      alert('Incorrect password!');
+    }
+    setPassword('');
+  };
+
+  const login = (
+    <form action="#" onSubmit={handleSubmit}>
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <input type="submit" value="Submit" />
+    </form>
+  );
+
+  const contactInfo = (
+    <div>
+      <p>Email: sabasaba@gmail.com</p>
+      <p>Phone: 56893423423</p>
+    </div>
+  );
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1>{authorized ? 'Contact' : 'Enter the Password'}</h1>
+      {authorized ? contactInfo : login}
+    </div>
+  );
 }
 
-export default App
+export default Contact
