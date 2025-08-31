@@ -1,35 +1,44 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React, { useState } from "react";
+import AuthForm from "./components/AuthForm";
+import UserProfile from "./components/UserProfile";
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [authType, setAuthType] = useState("login");
+
+  const handleAuth = (formData) => {
+    // აქ შეიძლებოდა რეალური API, მაგრამ ტესტისთვის პირდაპირ ვქმნით ობიექტს
+    if (authType === "login") {
+      // მაგალითად login-ის შემოწმება
+      if (formData.username === "test" && formData.password === "1234") {
+        setUser({ username: formData.username });
+      } else {
+        alert("არასწორი მონაცემები!");
+      }
+    } else {
+      // რეგისტრაცია
+      alert("რეგისტრაცია წარმატებით დასრულდა!");
+      setAuthType("login");
+    }
+  };
+
+  if (user) {
+    return <UserProfile user={user} />;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div style={{ padding: "20px" }}>
+      <AuthForm type={authType} onAuth={handleAuth} />
+      <button
+        style={{ marginTop: "10px" }}
+        onClick={() => setAuthType(authType === "login" ? "register" : "login")}
+      >
+        {authType === "login" ? "რეგისტრაციაზე გადასვლა" : "ავტორიზაციაზე დაბრუნება"}
+      </button>
+    </div>
+  );
 }
-
-export default App

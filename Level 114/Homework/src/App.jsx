@@ -1,35 +1,55 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+import React, { useState } from 'react';
+
+function UserForm() {
+  // useState-ის მეშვეობით ვქმნით ერთიან მდგომარეობას (ობიექტს), სადაც გვექნება ორი ველი: firstname და lastname
+  const [user, setUser] = useState({
+    firstname: '',
+    lastname: ''
+  });
+
+  // ეს ფუნქცია გამოიძახება ყოველ ჯერზე, როცა რომელიმე input შეიცვლება
+  const handleChange = (e) => {
+    const { name, value } = e.target; // ვიღებთ input-ის name-სა და მნიშვნელობას
+
+    // განვაახლებთ user ობიექტს ისე, რომ მხოლოდ ცვლადი ველი შეიცვალოს
+    setUser(prevUser => ({
+      ...prevUser,       // ვტოვებთ ყველა სხვა ველს უცვლელად
+      [name]: value      // ვანახლებთ კონკრეტულად იმ ველს, რომელიც შეიცვალა (name-ის მიხედვით)
+    }));
+  };
 
   return (
-    <>
+    <div>
+      {/* input value სახელისთვის. name="firstname" ემთხვევა user ობიექტის key-ს */}
+      <input
+        type="text"
+        name="firstname"
+        value={user.firstname}
+        onChange={handleChange}
+        placeholder="Enter Firstname"
+      />
+
+      {/* input value გვარისთვის */}
+      <input
+        type="text"
+        name="lastname"
+        value={user.lastname}
+        onChange={handleChange}
+        placeholder="Enter Lastname"
+      />
+
+      {/* ქვემოთ ავტომატურად გამოჩნდება ჩაწერილი მონაცემები */}
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <p>Firstname: {user.firstname || ""}</p>
+        <p>Lastname: {user.lastname || ""}</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default UserForm;

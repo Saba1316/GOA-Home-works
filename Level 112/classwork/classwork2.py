@@ -1,0 +1,11 @@
+# Codewars 6 kyu: Highest Scoring Word
+
+def high(x):
+    arr,numArr = x.split(' '),[]
+    for val in arr:
+        intNum = 0
+        letters = list(val)
+        for word in letters:
+            intNum += ord(word) - 96
+        numArr.append(intNum)
+    return arr[numArr.index(max(numArr))]

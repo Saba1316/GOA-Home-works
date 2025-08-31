@@ -1,68 +1,46 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* import React from "react";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+// Child Component
+function Child(props) {
+  return (
+    <div>
+      {/* Access the name passed from Parent through props */
+      /* <h2>This is the Child component. Name: {props.name}</h2>
+    </div>
+  );
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+// Parent Component
+function Parent(props) {
+  return (
+    <div>
+      <h1>This is the Parent component.</h1>
+      {/* Pass the name down to the Child component */
+      /* <Child name={props.name} />
+    </div>
+  );
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+// App Component
+function App() {
+  const myName = "Saba"; // Store your name in a variable */
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  /* return (
+    <div>
+      <h1>This is the App component.</h1>
+      {Pass the name to the Parent component as a prop} */
+      /* <Parent name={myName} />
+    </div>
+  );
+} */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+/* export default App; */ 
+
+
+/* App defines a variable myName and passes it as a prop to Parent.
+
+Parent receives the prop and passes it down to Child.
+
+Child uses props.name to display it.
+
+Let me know if you want to add interactivity (like updating the name using input) or more examples!

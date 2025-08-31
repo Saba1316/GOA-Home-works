@@ -1,35 +1,67 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+ 
+
+
+import React, { useState, useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [genre, setGenre] = useState("");
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    if (genre.trim() === "") return;
+
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch(
+          `https://www.googleapis.com/books/v1/volumes?q=subject:${genre}`
+        );
+        const data = await response.json();
+        setBooks(data.items || []);
+      } catch (error) {
+        console.error("Failed to fetch books:", error);
+        setBooks([]);
+      }
+    };
+
+    fetchBooks();
+  }, [genre]);
+
+  const handleInputChange = (e) => {
+    setGenre(e.target.value);
+  };
 
   return (
-    <>
+    <div>
+      <h1>Book Genre Search</h1>
+      <input
+        type="text"
+        placeholder="Type a genre (e.g. fantasy, history)"
+        onChange={handleInputChange}
+      />
+
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {books.length === 0 && genre && <p>No books found.</p>}
+        {books.map((book) => {
+          const info = book.volumeInfo;
+          return (
+            <div key={book.id}>
+              <h3>{info.title}</h3>
+              <p>
+                Author(s): {info.authors ? info.authors.join(", ") : "Unknown"}
+              </p>
+              {info.imageLinks?.thumbnail && (
+                <img src={info.imageLinks.thumbnail} alt={info.title} />
+              )}
+              <hr />
+            </div>
+          );
+        })}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

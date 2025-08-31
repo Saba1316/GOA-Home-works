@@ -1,42 +1,26 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+// // Props (short for "properties") are used to pass data from one component to another.
+// // Usually, a parent component passes props to a child component.
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+// // Example:
+// function Greeting(props) {
+//   return <h1>Hello, {props.name}!</h1>;
+// }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// // In the parent component:
+// <Greeting name="Saba" />
+// Explanation:
+// jsx
+// კოპირება
+// ჩასწორება
+// // 'props' is an object that contains all the data passed to the component.
+// // In this case, props = { name: "Saba" }
+// // Inside the Greeting component, we can access props.name
+// // Props are **read-only** – you can use them, but not modify them inside the child.
+// Props are essential in React for:
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+// Making components reusable
 
-.card {
-  padding: 2em;
-}
+// Passing data between components
 
-.read-the-docs {
-  color: #888;
-}
+// Keeping components modular and clean
+

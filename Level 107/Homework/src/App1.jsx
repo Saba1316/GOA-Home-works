@@ -1,42 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+// Modularity means splitting your code into small, manageable, and reusable parts (modules).
+// In React, this means creating separate components for different pieces of your UI.
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+// Example:
+// Instead of writing everything in App.js, we create separate files:
+// - Header.jsx
+// - Footer.jsx
+// - ProductCard.jsx
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// This helps:
+// - Keep code organized and readable
+// - Make components reusable across different parts of the app
+// - Easier to debug and test
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+// When rendering a list of elements using .map(), React requires a 'key' prop for each item.
+// 'key' helps React identify which items changed, were added, or removed.
 
-.card {
-  padding: 2em;
-}
+const names = ["Anna", "Ben", "Cathy"];
 
-.read-the-docs {
-  color: #888;
-}
+return (
+  <ul>
+    {names.map((name, index) => (
+      // Always use a unique key if possible (e.g. id from data)
+      <li key={index}>{name}</li>
+    ))}
+  </ul>
+);

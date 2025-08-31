@@ -1,0 +1,19 @@
+.app-container {
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.color-box {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  transition: background-color 0.3s ease;
+}

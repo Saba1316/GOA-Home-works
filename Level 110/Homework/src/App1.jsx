@@ -1,42 +1,33 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+// // Self-closing tags are used when we don’t want to pass any content (children) inside the component.
+// <ProfileCard />  // Just renders the component with no inner content.
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+// // Container tags are used when we want to include content inside the component.
+// // This content is passed as 'children' to the component.
+// <Modal>
+//   <p>This is the content inside the modal</p>
+// </Modal>  // 'Modal' will receive the inner content as 'props.children'
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+// // A component that receives and displays its children
+// function MyWrapper(props) {
+//   return (
+//     <div className="wrapper">
+//       {/* This will render whatever content was placed inside <MyWrapper> */}
+//       {props.children}
+//     </div>
+//   );
+// }
 
-.card {
-  padding: 2em;
-}
+// // Usage of that component
+// <MyWrapper>
+//   <h1>Hello!</h1>
+//   <p>This paragraph is inside the wrapper.</p>
+// </MyWrapper>
+// Key points:
+// children is a special prop in React that includes everything between the opening and closing tags of a component.
 
-.read-the-docs {
-  color: #888;
-}
+// It allows for more flexible and reusable components.
+
+// children is part of the props object: you access it with props.children.
+
+// Use it when you want to make a wrapper or layout component that displays whatever is passed inside it.
