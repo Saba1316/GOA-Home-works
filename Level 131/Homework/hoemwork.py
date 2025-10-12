@@ -1,0 +1,1 @@
+# I did all codewars that i had in classwork.
